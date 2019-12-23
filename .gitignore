@@ -6,3 +6,5 @@ bsp/raspi2/build/
 bsp/raspi2/cconfig.h
 
 bsp/raspi2/rtthread.elf
+
+bsp/raspi2/rtthread.map
