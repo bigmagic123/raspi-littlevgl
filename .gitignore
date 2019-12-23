@@ -1,0 +1,8 @@
+
+bsp/raspi2/build/
+
+*.dblite
+
+bsp/raspi2/cconfig.h
+
+bsp/raspi2/rtthread.elf
