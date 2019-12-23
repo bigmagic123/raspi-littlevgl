@@ -1,0 +1,23 @@
+
+config BSP_SUPPORT_FPU
+    bool "Using Float"
+    default n
+
+menu "Hardware Drivers Config"
+    menu "BCM Peripheral Drivers"
+        menuconfig BSP_USING_UART
+            bool "Using UART"
+            select RT_USING_SERIAL
+            default y
+
+            if BSP_USING_UART
+                config RT_USING_UART0
+                bool "Enabel UART 0"
+                default y
+
+                config RT_USING_UART1
+                    bool "Enabel UART 1"
+                    default n
+            endif
+    endmenu
+endmenu
