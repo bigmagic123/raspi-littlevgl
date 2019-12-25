@@ -26,14 +26,18 @@
 #include <stdlib.h>
 
 #include <rtthread.h>
+#include <drv_fb.h>
 
 int main(int argc, char** argv)
 {
+    clock_t ii = 0;
     rt_kprintf("Hello RT-Thread!\n");
+    rt_fb_init(640,480);
     while(1)
     {
-        rt_kprintf("cur tick is %d\n",rt_tick_get());
-        rt_thread_delay(1000);
+        rt_thread_delay(100);
+        ii = ii + 1;
+        fb_clear(RGB(ii,ii,ii));
     }
     return 0;
 }
